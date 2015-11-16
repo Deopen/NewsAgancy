@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Register</title>
+
+<script language="javascript">
+
+
+function validateEmailAndPasswordThenSubmit() { 
+    var email=document.getElementsByName("email")[0].value
+    
+    if (email.length==0){	
+    	alert ("Please enter your email address.")
+    	return false
+    }
+    
+    //===================================================================================
+    
+	// SRC: http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var formatResult=re.test(email);
+	
+	//===================================================================================
+	
+    if (!formatResult){
+    	alert("Please enter a valid email!")
+    	return false
+    }
+    
+    var email_c=document.getElementsByName("email_c")[0].value
+    
+    if (email!=email_c){
+    	alert("Email confirmation doesn't match")
+    	return false
+    }
+    
+    var pass=document.getElementsByName("pass")[0].value
+    var pass_c=document.getElementsByName("pass_c")[0].value
+    
+    if (pass.length==0){	
+    	alert ("Please choose a password.")
+    	return false
+    }
+    
+    if (pass!=pass_c){
+    	alert("Passwords doesn't match")
+    	return false
+    
+    }
+    
+    document.myForm.submit();
+    
+}
+
+</script>
+
+</head>
+
+<body>
+
+<form method="POST" Action="Register.php" name="myForm">
+
+Username  		: <input type="text" name="uname" /><br><br>
+Name  			: <input type="text" name="name" /><br><br>
+Family			: <input type="text" name="family" /><br><br>
+Email			: <input type="text" name="email" /><br><br>
+Confirm email	: <input type="text" name="email_c" /><br><br>
+Passwrod		: <input type="password" name="pass" /><br><br>
+Retype passwrod	: <input type="password" name="pass_c" /><br><br>
+
+
+<br><br><input type="button" value="Send" onclick="validateEmailAndPasswordThenSubmit()">
+<br><a href="home.php">Home</a>
+</body>
+</html>

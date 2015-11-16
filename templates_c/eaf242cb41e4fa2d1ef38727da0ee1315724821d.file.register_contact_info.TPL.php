@@ -1,0 +1,22 @@
+<?php /* Smarty version Smarty-3.1.20, created on 2015-05-10 13:09:59
+         compiled from "./templates/register_contact_info.TPL" */ ?>
+<?php /*%%SmartyHeaderCode:1203248944553a7db5caaee7-95595144%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'eaf242cb41e4fa2d1ef38727da0ee1315724821d' => 
+    array (
+      0 => './templates/register_contact_info.TPL',
+      1 => 1431256181,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1203248944553a7db5caaee7-95595144',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.20',
+  'unifunc' => 'content_553a7db5d47b49_72862567',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_553a7db5d47b49_72862567')) {function content_553a7db5d47b49_72862567($_smarty_tpl) {?><!doctype html><html><head>   <script>function validateEmailThenSubmit() { var email=document.getElementsByName("email")[0].valuevar email_c=document.getElementsByName("email_c")[0].valueif (email!=email_c){	alert ("email confirmation does'nt match!")	return false}var emailRe = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;if (!emailRe.test(email)){	alert ("email format doesn't match!")	return false;}document.registerContactFrom.submit()}</script>  <title>register.php</title></head>  <body><form method="POST" action="register.php" name="registerContactFrom">	<table id="main" border="0" align="center" style="	background-image: url(./img/deopen_background.png);	background-position: center; 	background-repeat: no-repeat;	text-align: center;	background-size: contain;	position: relative;	">		<tr><td>&nbsp&nbsp</td></tr>	<tr><td align="center">	<img id="banner" src="./img/mini_logo.png" />	</tr></td>	<tr><td>&nbsp&nbsp</td></tr>		<tr><td>	<table border=0 align=center>	<tr><td>	<label for="email"><font color="orange" size=3>*</font></label>	</td><td>	<input type="text" style="font-size:15px; text-align: center;" 	name="email" placeholder="Email" id="fullname" 	mozactionhint="next" size=40 />	</td></tr>	</table>		<tr><td>	<table border=0 align=center>	<tr><td>	<label for="email_c"><font color="orange" size=3>*</font></label>	</td><td>	<input type="text" style="font-size:15px; text-align: center; " 	name="email_c" placeholder="Confirm Email"	 mozactionhint="next" size=40 />		</td></tr>	</table>	</td></tr>	<tr><td>	<table align=center>	<tr><td>&nbsp&nbsp</td><td>	<input type="text" style="font-size:15px; text-align: center;" 	name="mobile" placeholder="Mobile" mozactionhint="next" size=40 />	</td></tr>	</table>	</td></tr>	<tr><td>	<table border=0 align=center>	<tr><td>&nbsp&nbsp</td>	<td>	<input type="text" style="font-size:15px; text-align: center; " 	name="telephone" placeholder="Telephone"	 mozactionhint="next" size=40 />		</th></tr>	</table></td></tr>		<tr><td>	<table border=0 align=center>	<tr><td>&nbsp&nbsp</td>	<td>	<input type="text" style="font-size:15px; text-align: center; " 	name="blog" placeholder="Blog"	 mozactionhint="next" size=40 />		</th></tr>	</table></td></tr>		<tr><td>	<table border=0 align=center>	<tr><td>&nbsp&nbsp</td>	<td>	<input type="text" style="font-size:15px; text-align: center; " 	name="website" placeholder="Website"	 mozactionhint="next" size=40 />		</th></tr>	</table></td></tr>				<tr>	<td >	<table border=0 align=center>	<tr><td>	<button type="button" onClick="location.href='login.php'"	style=";border: 0; background: transparent"	>	<img src="./img/home_button.png" alt="home" style="width:70%;height=70%"/>	</button>	</td>		<td>	<button type="button"	onClick="validateEmailThenSubmit()"	style=	"display:table-cell;	border: 0;	background:transparent">	<img src="./img/next_button.png" style="width:100%"	alt="submit" />	</button>	</td></tr>	</table>		</table>		</td></tr>	<tr><td>&nbsp</td></tr>	<tr><td>&nbsp</td></tr>	<tr><td>&nbsp</td></tr>	</table></form><script>        function autoResizeDiv()        {            document.getElementById('main').style.height = window.innerHeight*0.8 +'px';        	 document.getElementById('main').style.width = window.innerWidth*0.8 +'px';       		        }        window.onresize = autoResizeDiv;        autoResizeDiv();</script></body></html><?php }} ?>
